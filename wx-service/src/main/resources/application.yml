@@ -1,0 +1,14 @@
+
+
+server:
+  port: 8000
+
+spring:
+  application:
+    name: wx-service
+  profiles:
+    active: dev
+
+tencent:
+  mapKey: 6NJBZ-DFDAG-6QWQC-I55XF-IR4Z5-3GBLY
+  secretKey: L7eAGBrwPbFjSbKbsiLiK6KjdVzd454a

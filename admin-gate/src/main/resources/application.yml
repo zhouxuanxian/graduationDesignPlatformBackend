@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+
+zuul:
+  prefix: /api
+  strip-prefix: true
+  host:
+    max-per-route-connections: 15000
+    socket-timeout-millis: 15000
+    connect-timeout-millis: 15000
+  routes:
+    wx-service:
+      path: /wxService/**
+      serviceId: wx-service
+      url: http://${WX-SERVICE:localhost}:8000/
+
+
+ribbon:
+  ReadTimeout: 15000
+  SocketTimeout: 15000
